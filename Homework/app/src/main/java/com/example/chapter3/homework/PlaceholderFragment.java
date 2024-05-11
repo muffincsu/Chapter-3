@@ -82,24 +82,24 @@ public class PlaceholderFragment extends Fragment {
     private void loadListViewData(ListView listView)
     {
         List<String> friends = new ArrayList<>();
-        friends.add("西狮海壬");
-        friends.add("喷火龙");
-        friends.add("仙子伊布");
-        friends.add("魔幻假面喵");
-        friends.add("甲贺忍蛙");
-        friends.add("炽焰咆哮虎");
-        friends.add("卡璞鳍鳍");
-        friends.add("苍响");
-        friends.add("藏玛然特");
-        friends.add("蕾冠王");
-        friends.add("故勒顿");
-        friends.add("密勒顿");
-        friends.add("雷吉艾勒奇");
-        friends.add("阿尔宙斯");
-        friends.add("美纳斯");
-        friends.add("沙奈朵");
-        friends.add("闪焰王牌");
-        friends.add("无极汰那");
+        friends.add("郭荣桓");
+        friends.add("李明轩");
+        friends.add("孙甜甜");
+        friends.add("章宗宇");
+        friends.add("贺大江");
+        friends.add("刘万昌");
+        friends.add("蒙睿涵");
+        friends.add("杨明璋");
+        friends.add("段瑞阳");
+        friends.add("廖梦成");
+        friends.add("马浩文");
+        friends.add("王成运");
+        friends.add("颜慧婷");
+        friends.add("左亦涛");
+        friends.add("林家琛");
+        friends.add("沈昕慧");
+        friends.add("幸俊杰");
+        friends.add("叶卓维");
         SimpleFriendListAdapter adapter = new SimpleFriendListAdapter(getActivity(), friends);
         listView.setAdapter(adapter);
     }
