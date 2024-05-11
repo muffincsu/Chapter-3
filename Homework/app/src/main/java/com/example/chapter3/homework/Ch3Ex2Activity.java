@@ -138,11 +138,25 @@ public class Ch3Ex2Activity extends AppCompatActivity {
 
         // TODO ex2-1：在这里实现另一个 ObjectAnimator，对 target 控件的大小进行缩放，从 1 到 2 循环
 
+        ObjectAnimator scaleXAnimator = ObjectAnimator.ofFloat(target, "scaleX", 1f, 2f);
+        scaleXAnimator.setDuration(Integer.parseInt(durationSelector.getText().toString()));
+        scaleXAnimator.setRepeatCount(ObjectAnimator.INFINITE);
+        scaleXAnimator.setRepeatMode(ObjectAnimator.REVERSE);
+
+        ObjectAnimator scaleYAnimator = ObjectAnimator.ofFloat(target, "scaleY", 1f, 2f);
+        scaleYAnimator.setDuration(scaleXAnimator.getDuration());
+        scaleYAnimator.setRepeatCount(scaleXAnimator.getRepeatCount());
+        scaleYAnimator.setRepeatMode(scaleXAnimator.getRepeatMode());
         // TODO ex2-2：在这里实现另一个 ObjectAnimator，对 target 控件的透明度进行修改，从 1 到 0.5f 循环
+
+        ObjectAnimator alphaAnimator = ObjectAnimator.ofFloat(target, "alpha", 1f, 0.5f);
+        alphaAnimator.setDuration(Integer.parseInt(durationSelector.getText().toString()));
+        alphaAnimator.setRepeatCount(ObjectAnimator.INFINITE);
+        alphaAnimator.setRepeatMode(ObjectAnimator.REVERSE);
 
         // TODO ex2-3: 将上面创建的其他 ObjectAnimator 都添加到 AnimatorSet 中
         animatorSet = new AnimatorSet();
-        animatorSet.playTogether(animator1);
+        animatorSet.playTogether(animator1, scaleXAnimator, scaleYAnimator, alphaAnimator);
         animatorSet.start();
     }
 }
